@@ -18,7 +18,7 @@ set -u
 
 mk="$@"
 
-function build() {
+build() {
   cat <<EOF > Makefile
 all: FOO $1 bar
 all: .KATI_READONLY $2 FOO

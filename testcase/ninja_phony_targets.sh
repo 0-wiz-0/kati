@@ -17,7 +17,7 @@
 set -e
 
 mk="$@"
-function build() {
+build() {
   # Remove once regen works with different args
   rm -f build.ninja .kati_stamp ninja.sh
   ${mk} $@

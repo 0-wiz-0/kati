@@ -26,7 +26,7 @@ mk="$@"
 if echo "${mk}" | grep kati > /dev/null; then
   mk="${mk} --use_find_emulator"
 fi
-function build() {
+build() {
   ${mk} $@ 2> /dev/null
   if [ -e ninja.sh ]; then ./ninja.sh -j1 $@; fi
 }
