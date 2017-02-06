@@ -133,8 +133,8 @@ end
 
 def normalize_make_log(expected, mk, via_ninja)
   expected = normalize_quotes(expected)
-  expected.gsub!(/^make(?:\[\d+\])?: (Entering|Leaving) directory.*\n/, '')
-  expected.gsub!(/^make(?:\[\d+\])?: /, '')
+  expected.gsub!(/^g?make(?:\[\d+\])?: (Entering|Leaving) directory.*\n/, '')
+  expected.gsub!(/^g?make(?:\[\d+\])?: /, '')
   expected = move_circular_dep(expected)
 
   # Normalizations for old/new GNU make.
