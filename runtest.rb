@@ -229,7 +229,7 @@ run_make_test = proc do |mk|
 
     cleanup
     testcases.each do |tc|
-      cmd = 'make'
+      cmd = 'gmake'
       if via_ninja || is_silent_test
         cmd += ' -s'
       end
@@ -340,7 +340,7 @@ run_shell_test = proc do |sh|
 
   run_in_testdir(sh) do |name|
     cleanup
-    cmd = "sh ../../#{sh} make"
+    cmd = "sh ../../#{sh} gmake"
     if is_ninja_test
       cmd += ' -s'
     end
