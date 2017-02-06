@@ -78,6 +78,9 @@ KATI_CXXFLAGS += -march=native
 ifeq ($(shell uname),Linux)
 KATI_LIBS := -lrt -lpthread
 endif
+ifeq ($(shell uname),NetBSD)
+KATI_LIBS := -pthread
+endif
 
 # Rule to build ckati into KATI_BIN_PATH
 $(KATI_BIN_PATH)/ckati: $(KATI_CXX_OBJS) $(KATI_CXX_GENERATED_OBJS)
