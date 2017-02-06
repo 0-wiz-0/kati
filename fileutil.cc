@@ -131,7 +131,7 @@ int RunCommand(const string& shell, const string& shellflag,
 }
 
 void GetExecutablePath(string* path) {
-#if defined(__linux__)
+#if defined(__linux__) || defined(__NetBSD__)
   char mypath[PATH_MAX + 1];
   ssize_t l = readlink("/proc/self/exe", mypath, PATH_MAX);
   if (l < 0) {
