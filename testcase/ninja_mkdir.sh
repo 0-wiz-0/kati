@@ -31,7 +31,7 @@ ${mk} 2> ${log}
 if [ -e ninja.sh ]; then
   ./ninja.sh
 fi
-if [[ ! -d a ]]; then
+if [ ! -d a ]; then
   echo "Created 'a'"
 fi
 if [ -e ninja.sh ]; then
