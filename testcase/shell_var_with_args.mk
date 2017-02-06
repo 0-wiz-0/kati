@@ -12,7 +12,7 @@ else
 
 export FOO=-x
 
-override SHELL := PS4="cmd: " /bin/bash $${FOO}
+override SHELL := PS4="cmd: " /usr/pkg/bin/bash $${FOO}
 $(info $(shell echo foo))
 
 test:

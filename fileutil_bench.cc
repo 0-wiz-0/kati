@@ -19,7 +19,7 @@
 #include <cstdio>
 
 static void BM_RunCommand(benchmark::State& state) {
-  std::string shell = "/bin/bash";
+  std::string shell = "/usr/pkg/bin/bash";
   std::string shellflag = "-c";
   std::string cmd = "echo $((1+3))";
   while (state.KeepRunning()) {
@@ -30,7 +30,7 @@ static void BM_RunCommand(benchmark::State& state) {
 BENCHMARK(BM_RunCommand);
 
 static void BM_RunCommand_ComplexShell(benchmark::State& state) {
-  std::string shell = "/bin/bash ";
+  std::string shell = "/usr/pkg/bin/bash ";
   std::string shellflag = "-c";
   std::string cmd = "echo $((1+3))";
   while (state.KeepRunning()) {

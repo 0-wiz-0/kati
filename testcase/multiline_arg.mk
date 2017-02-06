@@ -1,4 +1,4 @@
-SHELL:=/bin/bash
+SHELL:=/usr/pkg/bin/bash
 
 define func
 $(info INFO: $(1))

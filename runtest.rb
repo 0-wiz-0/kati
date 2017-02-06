@@ -180,7 +180,7 @@ def normalize_kati_log(output)
   output
 end
 
-bash_var = ' SHELL=/bin/bash'
+bash_var = ' SHELL=/usr/pkg/bin/bash'
 
 run_make_test = proc do |mk|
   c = File.read(mk)
